@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-lexend {
+            font-family: "Lexend", sans-serif;
+    }
+    </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="font-lexend">
+    <header class="bg-[#F9F7F3] pt-5 pb-10 sticky top-0 z-50">
+        <nav class="container mx-auto">
+          <div class="navbar">
+              <div class="navbar-start">
+                <a href="index.html" class="btn btn-active bg-[#B4F461] text-lg font-bold">Home</a>
+              </div>
+              <div class="navbar-center gap-2">
+                <div>
+                  <img src="../assets/logo.png" alt="">
+                </div>
+                <div>
+                  <h1 class="text-3xl">Donate Bangladesh</h1>
+                </div>
+              </div>
+              <div class="navbar-end gap-3">
+                <div>
+                  <img src="../assets/logo.png" alt="">
+                </div>
+                <div>
+                  <h1 class="text-2xl"><span>5500</span> BDT</h1>
+                </div>
+              </div>
+          </div>
+        </nav>
+    </header>
+    <main class="bg-[#FFFFFF] pt-20">
+        <div class="container mx-auto">
+            <div class="mb-10">
+                <h1 class="text-4xl font-bold">
+                    Important FAQ <span></span>
+                </h1>
+            </div>
+            <!-- Q-1  -->
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border my-4">
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+                </p>
+                </div>
+            </div>
+            <!-- Q-2  -->
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border my-4">
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?
+                </div>
+                <div class="collapse-content">
+                  <p class="mb-5">To select an element from the DOM, there are several methods provided by JavaScript. Here are the most common ones: 
+                    <ul>
+                        <li>1. getElementById() : selects only one element by its unique ID.</li>
+                        <li>2. getElementsByClassName() :  return live collections (updates with DOM changes).</li>
+                        <li>3. getElementsByTagName() :  return live collections (updates with DOM changes).</li>
+                        <li>4. querySelector() : use CSS selectors and are more flexible but are slower than the other methods.</li>
+                        <li>5. querySelectorAll() : use CSS selectors and are more flexible but are slower than the other methods.</li>
+                    </ul>
+                  </p>
+                </div>
+            </div>
+            <!-- Q-3  -->
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border my-4">
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
+                  <h3 class="font-bold">Why Event Delegation is Useful:</h3>
+                  <p>
+                    <span class="font-bold">Performance:</span> Reduces memory usage and improves performance when many elements are involved, as fewer event listeners are added. <br> <span class="font-bold">Dynamic Content:</span> Works well with elements that are dynamically added to the DOM after the event listener is set up (e.g., when new child elements are added after an AJAX call). <br> <span class="font-bold">Simplifies Code: </span>Instead of attaching listeners to each child element, you manage all similar events from a single parent, keeping code simpler and more maintainable.
+
+                  </p>
+                </div>
+            </div>
+            <!-- Q-4  -->
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border my-4">
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <h3 class="mb-5">
+                      To manipulate an element's attributes and styles in the DOM using various JavaScript methods we can use-
+                  </h3>
+                  <ul>
+                    <li>By using getAttribute(), setAttribute(), and removeAttribute() to manipulate an element's attributes.</li>
+                    <li>By using the style property for inline style changes and classList for CSS class manipulation.</li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
