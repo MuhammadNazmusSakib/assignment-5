@@ -49,7 +49,7 @@
                 <img class="w-5 sm:w-6" src="../assets/logo.png" alt="">
               </div>
               <div>
-                <h1 class="text-2xl font-bold sm:text-3xl"><span>5500</span> BDT</h1>
+                <h1 class="text-2xl font-bold sm:text-3xl"><span id="balance">5500</span> BDT</h1>
               </div>
             </div>
         </div>
@@ -57,8 +57,8 @@
     </nav>
     <div class="container mx-auto bg-[#FFFFFF] py-5">
       <div class="flex justify-center gap-5 mb-3">
-        <button class="btn btn-lg">Donation</button>
-        <button class="btn btn-lg">History</button>
+        <button class="btn btn-lg" id="donation">Donation</button>
+        <button class="btn btn-lg" id="history">History</button>
       </div>
     </div>
   </header>
@@ -81,15 +81,34 @@
               </div>
               <!-- Donate button  --> 
               <div>
-                <h1 class="text-lg"><span>0</span> BDT</h1> <!--modal -->
+                <h1 class="text-lg"><span id="totalFundNoakhali">0</span> BDT</h1> <!--modal -->
               </div>
             </div>
             <h2 class="card-title py-4">Donate for Flood at Noakhali, Bangladesh</h2>
             <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
             <div class="my-4">
-              <input type="text" placeholder="Write Donation Amount" class="border border-[#E9E9E9] w-full h-14 rounded-xl p-2">
+              <input type="text" placeholder="Write Donation Amount" class="border border-[#E9E9E9] w-full h-14 rounded-xl p-2" id="donateToNoakhali">
             </div>
-            <button class="btn btn-active bg-[#B4F461] text-lg font-bold w-full">Donate Now</button>
+
+            <!--  the modal using ID.showModal() method (STARTS HERE) -->
+
+            <button class="btn btn-active bg-[#B4F461] text-lg font-bold w-full" id="donateButtonNoakhali">Donate Now</button>
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box flex flex-col justify-center items-center">
+                <h3 class="text-4xl font-bold my-3">Congrates!</h3>
+                <img class="w-12" src="../assets/coin.png" alt="">
+                <p class="py-4 text-center">You Have Donated for Humankind</p>
+                <h4 class="text-xl font-bold">Successfully</h4>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close confirmation</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+            <!--  the modal using ID.showModal() method (ENDS HERE) -->
+
           </div>
         </div> 
         <!-- Donate for Flood at Feni, Bangladesh  -->
@@ -106,15 +125,15 @@
               </div>
               <!-- Donate button  -->
               <div>
-                <h1 class="text-xl"><span>0</span> BDT</h1>
+                <h1 class="text-xl"><span id="totalFundFeni">0</span> BDT</h1>
               </div>
             </div>
             <h2 class="card-title py-4">Donate for Flood at Feni, Bangladesh</h2>
             <p> The recent floods in Feni have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
             <div class="my-4">
-              <input type="text" placeholder="Write Donation Amount" class="border border-[#E9E9E9] w-full h-14 rounded-xl p-2">
+              <input type="text" placeholder="Write Donation Amount" class="border border-[#E9E9E9] w-full h-14 rounded-xl p-2" id="donateToFeni">
             </div>
-            <button class="btn btn-active bg-[#B4F461] text-lg font-bold w-full">Donate Now</button>
+            <button class="btn btn-active bg-[#B4F461] text-lg font-bold w-full" id="donateButtonFeni">Donate Now</button>
           </div>
         </div> 
         <!-- Aid for Injured in the Quota Movement  -->
@@ -131,15 +150,15 @@
               </div>
               <!-- Donate button  -->
               <div>
-                <h1 class="text-xl"><span>0</span> BDT</h1>
+                <h1 class="text-xl"><span id="totalFundQuotaMovement">0</span> BDT</h1>
               </div>
             </div>
             <h2 class="card-title py-4">Aid for Injured in the Quota Movement</h2>
             <p> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
             <div class="my-4">
-              <input type="text" placeholder="Write Donation Amount" class="border border-[#E9E9E9] w-full h-14 rounded-xl p-2">
+              <input type="text" placeholder="Write Donation Amount" class="border border-[#E9E9E9] w-full h-14 rounded-xl p-2" id="donateToQuotaMovement">
             </div>
-            <button class="btn btn-active bg-[#B4F461] text-lg font-bold w-full">Donate Now</button>
+            <button class="btn btn-active bg-[#B4F461] text-lg font-bold w-full" id="donateButtonQuotaMovement">Donate Now</button>
           </div>
         </div> 
       </div>
@@ -148,5 +167,7 @@
   <footer class="bg-[#F9F7F3]">
     <div class="py-20"></div>
   </footer>
+  <script src="../js/function.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
