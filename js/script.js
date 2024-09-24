@@ -1,31 +1,52 @@
 // Working on Donate Button-------------------------------------------
 
-const donation = document.getElementById('donation');
+const donation = document.getElementById('donation')
 
-function handleButtonColorOnPageLoad() {
-    const currentPage = document.location.pathname;
+function donationButtonColorOnPageLoad() {
+    let currentPage = document.location.pathname
     
     if (currentPage === '/html/index.html' || currentPage === '/') {
         donation.style.backgroundColor = '#B4F461';
     } else {
-        donation.style.backgroundColor = '';
+        donation.style.backgroundColor = ''
     }
 }
-handleButtonColorOnPageLoad();
+donationButtonColorOnPageLoad()
 
 donation.addEventListener('click', function() {
-    donation.style.backgroundColor = '#B4F461';
-});
+    donation.style.backgroundColor = '#B4F461'
+})
 
 // Working on History Button---------------------------------------------
+
+const history = document.getElementById('history')
+
+function historyButtonColorOnPageLoad() {
+    let currentPage1 = document.location.pathname
+    
+    if (currentPage1 === '/html/history.html' || currentPage1 === '/') {
+        history.style.backgroundColor = '#B4F461';
+    } else {
+        history.style.backgroundColor = ''
+    }
+}
+historyButtonColorOnPageLoad()
+
+history.addEventListener('click', function() {
+    history.style.backgroundColor = '#B4F461'
+})
+
+
+// Preserving the History -----------------------------------------------
+
 
 
 
 // Donate for Flood at Noakhali-------------------------------------------
 
 document.getElementById('donateButtonNoakhali')
-.addEventListener('click', function(event1) {
-    event1.preventDefault()
+.addEventListener('click', function(event) {
+    event.preventDefault()
 
     const donateToNoakhali = inputFieldValueById('donateToNoakhali')
     let totalFundNoakhali = fieldValueById('totalFundNoakhali')
@@ -48,6 +69,16 @@ document.getElementById('donateButtonNoakhali')
     document.getElementById('totalFundNoakhali').innerText = totalFundNoakhali
 
     modal.showModal()
+
+    const historyItem = document.createElement('div')
+
+    historyItem.innerHTML = `
+      <h4>${donateToNoakhali} is Donated for Flood at Noakhali, Bangladesh</h4>
+      <p>Date: ${new Date}</p> 
+
+    `
+    const historyContainer = document.getElementById('historyList');
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild)
 
     document.getElementById('donateToNoakhali').value = ''
 })
@@ -88,8 +119,8 @@ document.getElementById('donateButtonFeni')
 // Aid for Injured in the Quota Movement-------------------------------------------------- 
 
 document.getElementById('donateButtonQuotaMovement')
-.addEventListener('click', function(event2) {
-    event2.preventDefault()
+.addEventListener('click', function(event3) {
+    event3.preventDefault()
 
     const donateToQuotaMovement = inputFieldValueById('donateToQuotaMovement')
     let totalFundQuotaMovement = fieldValueById('totalFundQuotaMovement')
@@ -115,4 +146,6 @@ document.getElementById('donateButtonQuotaMovement')
     
     document.getElementById('donateToQuotaMovement').value = ''
 })
+
+
 

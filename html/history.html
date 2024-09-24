@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-lexend {
+            font-family: "Lexend", sans-serif;
+    }
+    </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="sticky top-0 z-50">
+    <header class="sticky top-0 z-50">
+        <nav class="bg-[#F9F7F3] py-5">
+          <div class="container mx-auto">
+            <div class="flex flex-col items-center sm:flex-row sm:place-content-between">
+                <div>
+                  <a href="blog.html" class="btn btn-active w-64 sm:w-40 bg-[#B4F461] text-lg font-bold">Blog</a>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                  <div>
+                    <img class="w-5 sm:w-6" src="../assets/logo.png" alt="">
+                  </div>
+                  <div>
+                    <h1 class="text-2xl font-bold sm:text-3xl">Donate Bangladesh</h1>
+                  </div>
+                </div>
+                <div class="flex items-center justify-center gap-3">
+                  <div>
+                    <img class="w-5 sm:w-6" src="../assets/logo.png" alt="">
+                  </div>
+                  <div>
+                    <h1 class="text-2xl font-bold sm:text-3xl"><span id="balance">5500</span> BDT</h1>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </nav>
+        <div class="container mx-auto bg-[#FFFFFF] py-5">
+          <div class="flex justify-center gap-5 mb-3">
+            <a href="../html/index.html" class="btn btn-lg" id="donation">Donation</a>
+            <a href="../html/history.html" class="btn btn-lg" id="history">History</a>
+          </div>
+        </div>
+    </header>
+    <main>
+        <div class="container mx-auto">
+            <!-- History  -->
+            <div id="historyList" class="grid grid-cols-1 gap-5">
+                
+                 
+            </div>
+        </div>
+    </main>
+    <script src="../js/function.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

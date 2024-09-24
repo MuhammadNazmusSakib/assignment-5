@@ -26,3 +26,11 @@ function inputFieldValueById(id) {
     let inputNumber = Math.floor(inputValue)
     return inputNumber
 }
+
+function blog() {
+    window.location.href = 'blog.html'
+}
+
+function home() {
+    window.location.href = 'index.html'
+}
