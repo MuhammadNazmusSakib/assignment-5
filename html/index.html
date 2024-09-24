@@ -33,8 +33,10 @@
     <nav class="bg-[#F9F7F3] py-5">
       <div class="container mx-auto">
         <div class="flex flex-col items-center sm:flex-row sm:place-content-between">
+          <!-- Blog & Home button  -->
             <div>
-              <a onclick="blog()" class="btn btn-active w-64 sm:w-40 bg-[#B4F461] text-lg font-bold">Blog</a>
+              <a id="blog" class="btn btn-active w-64 sm:w-40 bg-[#B4F461] text-lg font-bold">Blog</a>
+              <a id="home" class="btn btn-active w-64 sm:w-40 bg-[#B4F461] text-lg font-bold hidden">Home</a>
             </div>
             <div class="flex items-center justify-center gap-2">
               <div>
@@ -57,16 +59,76 @@
     </nav>
     <div class="container mx-auto bg-[#FFFFFF] py-5">
       <div class="flex justify-center gap-5 mb-3">
-        <a href="../html/index.html" class="btn btn-lg" id="donation">Donation</a>
-        <a href="../html/history.html" class="btn btn-lg" id="history">History</a>
+        <a class="btn btn-lg" id="donation">Donation</a>
+        <a class="btn btn-lg" id="history">History</a>
       </div>
     </div>
   </header>
   <main class="bg-[#FFFFFF]">
     <div class="container mx-auto">
+
+      <!-- History  -->
+      <div id="historyList" class="grid grid-cols-1 gap-5"> 
+        <!-- History will be seen here   -->
+      </div>
+
+      <div class="hidden" id="blogContent">
+        <div class="mb-10">
+          <h1 class="text-2xl font-bold text-center sm:text-left sm:text-4xl">
+            Important FAQ <span>❔</span>
+          </h1>
+        </div>
+          <!-- Q-1  -->
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border my-4">
+          <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+          <div class="collapse-content">
+            <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+            </p>
+          </div>
+        </div>
+        <!-- Q-2  -->
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border my-4">
+          <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p class="mb-5">To select an element from the DOM, there are several methods provided by JavaScript. Here are the most common ones: 
+                  <ul>
+                      <li>1. getElementById() : selects only one element by its unique ID.</li>
+                      <li>2. getElementsByClassName() :  return live collections (updates with DOM changes).</li>
+                      <li>3. getElementsByTagName() :  return live collections (updates with DOM changes).</li>
+                      <li>4. querySelector() : use CSS selectors and are more flexible but are slower than the other methods.</li>
+                      <li>5. querySelectorAll() : use CSS selectors and are more flexible but are slower than the other methods.</li>
+                  </ul>
+                </p>
+            </div>
+        </div>
+        <!-- Q-3  -->
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border my-4">
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+              <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
+              <h3 class="font-bold">Why Event Delegation is Useful:</h3>
+              <p>
+                <span class="font-bold">Performance:</span> Reduces memory usage and improves performance when many elements are involved, as fewer event listeners are added. <br> <span class="font-bold">Dynamic Content:</span> Works well with elements that are dynamically added to the DOM after the event listener is set up (e.g., when new child elements are added after an AJAX call). <br> <span class="font-bold">Simplifies Code: </span>Instead of attaching listeners to each child element, you manage all similar events from a single parent, keeping code simpler and more maintainable.
+              </p>
+            </div>
+        </div>
+        <!-- Q-4  -->
+        <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border my-4">
+          <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <h3 class="mb-5">
+                To manipulate an element's attributes and styles in the DOM using various JavaScript methods we can use-
+              </h3>
+              <ul>
+                <li>By using getAttribute(), setAttribute(), and removeAttribute() to manipulate an element's attributes.</li>
+                <li>By using the style property for inline style changes and classList for CSS class manipulation.</li>
+              </ul>
+            </div>
+        </div>
+      </div>
       
       <!-- Cards  -->
-      <div class="py-5">
+      <div class="py-5" id="homeContent">
         <!-- Donate for Flood at Noakhali, Bangladesh  -->
         <div class="sm:flex card-side bg-base-100 border border-[#E9E9E9] sm:pl-5 flex-col sm:flex-row gap-14 rounded-2xl px-5 py-5 mb-3 lg:mb-4 col-span-2 items-stretch">
           <figure>

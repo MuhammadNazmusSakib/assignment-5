@@ -1,45 +1,26 @@
 // Working on Donate Button-------------------------------------------
 
 const donation = document.getElementById('donation')
-
-function donationButtonColorOnPageLoad() {
-    let currentPage = document.location.pathname
-    
-    if (currentPage === '/html/index.html' || currentPage === '/') {
-        donation.style.backgroundColor = '#B4F461';
-    } else {
-        donation.style.backgroundColor = ''
-    }
-}
-donationButtonColorOnPageLoad()
-
+donation.style.backgroundColor = '#B4F461'
 donation.addEventListener('click', function() {
     donation.style.backgroundColor = '#B4F461'
+    document.getElementById('homeContent').classList.remove('hidden')
+    document.getElementById('historyList').classList.add('hidden')
+    document.getElementById('blogContent').classList.add('hidden')
+    document.getElementById('history').style.backgroundColor = ''
 })
 
 // Working on History Button---------------------------------------------
 
 const history = document.getElementById('history')
 
-function historyButtonColorOnPageLoad() {
-    let currentPage1 = document.location.pathname
-    
-    if (currentPage1 === '/html/history.html' || currentPage1 === '/') {
-        history.style.backgroundColor = '#B4F461';
-    } else {
-        history.style.backgroundColor = ''
-    }
-}
-historyButtonColorOnPageLoad()
-
 history.addEventListener('click', function() {
     history.style.backgroundColor = '#B4F461'
+    document.getElementById('homeContent').classList.add('hidden')
+    document.getElementById('blogContent').classList.add('hidden')
+    document.getElementById('historyList').classList.remove('hidden')
+    document.getElementById('donation').style.backgroundColor = ''
 })
-
-
-// Preserving the History -----------------------------------------------
-
-
 
 
 // Donate for Flood at Noakhali-------------------------------------------
@@ -73,9 +54,10 @@ document.getElementById('donateButtonNoakhali')
     const historyItem = document.createElement('div')
 
     historyItem.innerHTML = `
-      <h4>${donateToNoakhali} is Donated for Flood at Noakhali, Bangladesh</h4>
+    <div class="bg-base-200 border border-[#E9E9E9] rounded-2xl p-5">
+      <h4 class="text-xl font-bold">${donateToNoakhali} Taka is Donated for Flood at Noakhali, Bangladesh</h4>
       <p>Date: ${new Date}</p> 
-
+    </div>
     `
     const historyContainer = document.getElementById('historyList');
     historyContainer.insertBefore(historyItem, historyContainer.firstChild)
@@ -111,6 +93,19 @@ document.getElementById('donateButtonFeni')
 
     modal.showModal()
 
+    // History 
+
+    const historyItem = document.createElement('div')
+
+    historyItem.innerHTML = `
+    <div class="bg-base-200 border border-[#E9E9E9] rounded-2xl p-5">
+      <h4 class="text-xl font-bold">${donateToFeni} Taka is Donated for Flood at Feni, Bangladesh</h4>
+      <p>Date: ${new Date}</p> 
+    </div>
+    `
+    const historyContainer = document.getElementById('historyList');
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+
     document.getElementById('donateToFeni').value = ''
 })
 
@@ -143,9 +138,48 @@ document.getElementById('donateButtonQuotaMovement')
     document.getElementById('totalFundQuotaMovement').innerText = totalFundQuotaMovement
 
     modal.showModal()
+
+    // History 
+
+    const historyItem = document.createElement('div')
+
+    historyItem.innerHTML = `
+    <div class="bg-base-200 border border-[#E9E9E9] rounded-2xl p-5">
+      <h4 class="text-xl font-bold">${donateToQuotaMovement} Taka is Donated for Aid for Injured in the Quota Movement</h4>
+      <p>Date: ${new Date}</p> 
+    </div>
+    `
+    const historyContainer = document.getElementById('historyList');
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild)
     
     document.getElementById('donateToQuotaMovement').value = ''
 })
 
+
+// Working on Blog Content------------------------------------------
+
+const blog = document.getElementById('blog')
+blog.addEventListener('click', function() {
+    document.getElementById('blog').classList.add('hidden')
+    document.getElementById('homeContent').classList.add('hidden')
+    document.getElementById('historyList').classList.add('hidden')
+    document.getElementById('blogContent').classList.remove('hidden')
+    document.getElementById('home').classList.remove('hidden')
+    donation.style.backgroundColor = ''
+    history.style.backgroundColor = ''
+})
+
+// Working on Home Content------------------------------------------
+
+const home = document.getElementById('home')
+home.addEventListener('click', function() {
+    donation.style.backgroundColor = '#B4F461'
+    document.getElementById('home').classList.add('hidden')
+    document.getElementById('blogContent').classList.add('hidden')
+    document.getElementById('historyList').classList.add('hidden')
+    document.getElementById('homeContent').classList.remove('hidden')
+    document.getElementById('blog').classList.remove('hidden')
+    history.style.backgroundColor = ''
+})
 
 

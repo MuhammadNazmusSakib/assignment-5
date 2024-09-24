@@ -27,10 +27,3 @@ function inputFieldValueById(id) {
     return inputNumber
 }
 
-function blog() {
-    window.location.href = 'blog.html'
-}
-
-function home() {
-    window.location.href = 'index.html'
-}
