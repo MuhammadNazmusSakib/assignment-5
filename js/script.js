@@ -182,4 +182,7 @@ home.addEventListener('click', function() {
     history.style.backgroundColor = ''
 })
 
+// ----------
+
+document.getElementById('historyList').classList.add('hidden')
 
